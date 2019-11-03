@@ -3,7 +3,7 @@
 
 @import "{{ site.theme }}";
 
-@media print, screen and (min-width: 960px) {
+@media print, screen and (min-width: 2000px) {
     body {
       word-wrap:break-word;
     }

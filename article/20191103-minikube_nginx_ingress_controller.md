@@ -62,6 +62,8 @@ ingress controller のログを見て設定が反映されたことを確認す�
     nginx-ingress-controller-57bf9855c8-9kbhc nginx-ingress-controller I1102 01:43:29.055002       6 event.go:258] Event(v1.ObjectReference{Kind:"ConfigMap", Namespace:"kube-system", Name:"nginx-load-balancer-conf", UID:"a86f84b8-d227-4806-a5a6-263f27fe02d3", APIVersion:"v1", ResourceVersion:"298106", FieldPath:""}): type: 'Normal' reason: 'UPDATE' ConfigMap kube-system/nginx-load-balancer-conf
     nginx-ingress-controller-57bf9855c8-9kbhc nginx-ingress-controller I1102 01:43:29.150700       6 controller.go:149] Backend successfully reloaded.
 
+オプション名や設定値が誤っている場合はこのログにリロードに失敗したことが出るので、対応すること。
+
 ## 参考
 
 記事の中で参照しているページ

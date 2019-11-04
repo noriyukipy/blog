@@ -9,6 +9,12 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
+header a:hover, a:focus {
+  color:#069;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 @media print, screen and (min-width: 960px) {
 
         div.wrapper {

@@ -3,6 +3,11 @@
 
 @import "{{ site.theme }}";
 
+a:hover, a:focus {
+  color:#069;
+  text-decoration: underline;
+}
+
 @media print, screen and (min-width: 960px) {
 
         div.wrapper {

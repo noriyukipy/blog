@@ -56,5 +56,6 @@ a:hover {
 
 /* code */
 pre.highlight {
-    background-color: rgb(245,245,245)
+    background-color: rgb(245,245,245);
+    padding: 2px;
 }

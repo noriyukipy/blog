@@ -55,7 +55,7 @@ a:hover {
 }
 
 /* Headers */
-.h1, h1 {
+.h1, h1, .h2, h2 {
     border-bottom: 1px solid rgba(0,0,0,.1);
 }
 

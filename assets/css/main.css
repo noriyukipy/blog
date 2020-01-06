@@ -1,0 +1,57 @@
+body {
+    color: rgb(78, 44, 1);
+    font-family: "hiragino maru gothic proN", -apple-system, 'BlinkMacSystemFont', Helvetica Neue, Hiragino Sans, "ヒラギノ角ゴシック", Hiragino Kaku Gothic ProN, "ヒラギノ角ゴ ProN", Meiryo, Sans-Serif;
+}
+
+.container {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.bg-theme {
+    background-color: rgb(255, 215,75);
+}
+
+h2 {
+    padding-bottom: 0.5em;
+}
+
+/* header */
+.header {
+    padding: 5em 0 0 10em;
+    height: 15em;
+    background-size: auto 90%;
+    background-position: 2em 1.5em;
+    background-repeat: no-repeat;
+    background-color: rgb(255, 215,75);
+}
+
+
+.header .title{
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+/* footer */
+footer {
+    padding: 1em 0 1em 0em;
+    background-color: rgb(255, 215, 75);
+}
+
+footer .copyright {
+    padding: 1em 0 1em 0em;
+    text-align: center;
+}
+
+footer .copyright-others {
+    padding: 1em 0 1em 0em;
+    text-align: center;
+}
+
+/* anker */
+a {
+}
+
+a:hover {
+  color: rgb(78, 44, 1);
+}

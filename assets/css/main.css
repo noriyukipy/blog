@@ -30,15 +30,6 @@ body {
 /* footer */
 footer {
     padding: 1em 0 1em 0em;
-}
-
-footer .copyright {
-    padding: 1em 0 1em 0em;
-    text-align: center;
-}
-
-footer .copyright-others {
-    padding: 1em 0 1em 0em;
     text-align: center;
 }
 

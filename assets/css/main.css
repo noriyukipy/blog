@@ -19,9 +19,6 @@ body {
     background-size: auto 90%;
     background-position: 2em 1.5em;
     background-repeat: no-repeat;
-    /*
-    background-color: rgb(255, 215,75);
-    */
 }
 
 
@@ -33,7 +30,6 @@ body {
 /* footer */
 footer {
     padding: 1em 0 1em 0em;
-    background-color: rgb(255, 215, 75);
 }
 
 footer .copyright {

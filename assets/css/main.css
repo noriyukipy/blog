@@ -12,10 +12,6 @@ body {
     background-color: rgb(255, 215,75);
 }
 
-h2 {
-    padding-bottom: 0.5em;
-}
-
 /* header */
 .header {
     padding: 5em 0 0 10em;
@@ -56,4 +52,9 @@ a {
 
 a:hover {
   color: rgb(78, 44, 1);
+}
+
+/* code */
+pre.highlight {
+    background-color: rgb(245,245,245)
 }

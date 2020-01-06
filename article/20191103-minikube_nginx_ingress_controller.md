@@ -1,6 +1,6 @@
 # minikube で nginx ingress controller の設定
 
-minikube の nginx ingress controller の設定方法に関するメモ
+minikube の nginx ingress controller の設定を調査したので参照先とともに方法を書きます。
 
 ## アドオンの有効化
 

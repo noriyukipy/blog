@@ -5,3 +5,7 @@
 ## 📚 外部記事
 
 - [【連載】対話システムをつくろう! Python超入門](https://news.mynavi.jp/itsearch/series/devsoft/Python.html) @マイナビニュース IT Search+
+
+## 🔖 リンク
+
+- [GitHub](https://github.com/noriyukipy)

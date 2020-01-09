@@ -9,7 +9,7 @@
 ## 🤖 つくったもの
 
 - [Aiji Moe](https://aijimoe.net) - チャットボット
-- [GPTChat](https://github.com/noriyukipy/gptchat) - GPT-2を使ったニューラル会話モデルの学習、対話生成ライブラリ。特に日本語対応している。
+- [GPTChat](https://github.com/noriyukipy/gptchat) - GPT-2を使ったニューラル会話モデルの学習、文生成ライブラリ。特に日本語対応している。
 
 ## 🔖 リンク
 

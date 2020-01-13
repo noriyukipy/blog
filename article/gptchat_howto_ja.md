@@ -59,9 +59,8 @@ GPTChatではトークナイザを日本語向けに変更をした上で、GPT-
 `transformers.BertJapaneseTokenizer` は transformers に [v2.3.0](https://github.com/huggingface/transformers/releases/tag/v2.3.0) より導入されたトークナイザで、東北大学により公開されていたものがマージされました。
 詳しくは次を参照ください。
 
-- https://www.nlp.ecei.tohoku.ac.jp/news-release/3284/
-- https://github.com/cl-tohoku/bert-japanese
-- https://twitter.com/huggingface/status/1205283603128758277
+- [https://www.nlp.ecei.tohoku.ac.jp/news-release/3284/](https://www.nlp.ecei.tohoku.ac.jp/news-release/3284/)
+- [https://github.com/cl-tohoku/bert-japanese](https://github.com/cl-tohoku/bert-japanese)
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">おはようござえます、日本の友達<br><br>Hello, Friends from Japan 🇯🇵! <br><br>Thanks to <a href="https://twitter.com/NlpTohoku?ref_src=twsrc%5Etfw">@NlpTohoku</a>, we now have a state-of-the-art Japanese language model in Transformers, `bert-base-japanese`.<br><br>Can you guess what the model outputs in the masked LM task below? <a href="https://t.co/XIBUu7wrex">pic.twitter.com/XIBUu7wrex</a></p>&mdash; Hugging Face (@huggingface) <a href="https://twitter.com/huggingface/status/1205283603128758277?ref_src=twsrc%5Etfw">December 13, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 

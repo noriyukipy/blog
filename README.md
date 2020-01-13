@@ -10,6 +10,7 @@
 
 - [Aiji Moe](https://aijimoe.net) - チャットボット
 - [GPTChat](https://github.com/noriyukipy/gptchat) - Python製のGPT-2を使ったニューラル会話モデルの学習、文生成ライブラリ。特に日本語対応している。
+  - 💡解説記事 [最新のニューラル会話モデルでおしゃべりしよう！ - GPT-2でチャットボット作成](./article/gptchat_howto_ja.md)
 
 ## 🔖 リンク
 

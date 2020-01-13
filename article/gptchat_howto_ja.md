@@ -1,7 +1,6 @@
 # 最新のニューラル会話モデルでおしゃべりしよう！ - GPT-2でチャットボット作成
 
-記事作成日 2019/01/13
-記事更新日 2019/01/13
+記事作成日 2019/01/13, 記事更新日 2019/01/13
 
 ## 概要
 
@@ -17,8 +16,8 @@ GPT および GPT-2は、大規模なウェブテキストから事前学習し�
 チャットボットへの適用手法は [1] で提案されており、2018年に開催された[ConvAI2](http://convai.io/)という対話コンペティションの自動評価部門にて一位に輝いています。
 この手法に興味がある方は、 [1] の他に著者本人が解説した [2] があるので合わせて参照してください。
 
-- [1] *TransferTransfo: A Transfer Learning Approach for Neural Network Based Conversational Agents* by Thomas Wolf et al. (https://arxiv.org/abs/1901.08149)
-- [2] *How to build a State-of-the-Art Conversational AI with Transfer Learning* by Thomas Wolf. (https://medium.com/huggingface/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313)
+- [1] *TransferTransfo: A Transfer Learning Approach for Neural Network Based Conversational Agents* by Thomas Wolf et al. ([[https://arxiv.org/abs/1901.08149]])
+- [2] *How to build a State-of-the-Art Conversational AI with Transfer Learning* by Thomas Wolf. ([[https://medium.com/huggingface/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313]])
 
 こうなってくると、日本語のチャットボットを作成できないかと期待しますね！
 しかし、GPT-2を使って日本語でチャットボットを作ろうとした時、立ちはだかる壁があります。
@@ -209,9 +208,9 @@ GPT-2 の事前学習モデルができたので、次はそれをファイン�
 
 GPT-2 を対話モデルとして使うためには、「入力発話」と「応答発話」の間にセパレータを入れてモデルに入力します。
 
-|           | 1       | 2       | 3       | 4       | 5       | 6       | 7 | 8 | 9 |
-| ---       | ---     | ---     | ---     | ---     | ---     | ---     | --- | --- | --- |
-| 単語     | \<bos\> | 餃子    | が | 食べ | たい | \<sep\> | 美味し | そう   | \<eos\> |
+|           | 1       | 2       | 3       | 4       | 5       | 6       | 7      | 8   | 9 |
+| ---       | ---     | ---     | ---     | ---     | ---     | ---     | ---    | --- | --- |
+| 単語     | \<bos\>  | 餃子    | が      | 食べ    | たい    | \<sep\> | 美味し | そう   | \<eos\> |
 
 そして学習時には「応答発話」の言語モデルを学習するようにします。
 

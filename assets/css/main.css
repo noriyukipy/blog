@@ -58,6 +58,11 @@ a:hover {
     padding-bottom: 0.3em;
 }
 
+.h3, h3 {
+    font-size: 1.3em;
+    padding-bottom: 0.3em;
+}
+
 /* code */
 pre.highlight {
     background-color: rgb(245,245,245);

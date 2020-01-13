@@ -16,8 +16,8 @@ GPT および GPT-2は、大規模なウェブテキストから事前学習し�
 チャットボットへの適用手法は [1] で提案されており、2018年に開催された[ConvAI2](http://convai.io/)という対話コンペティションの自動評価部門にて一位に輝いています。
 この手法に興味がある方は、 [1] の他に著者本人が解説した [2] があるので合わせて参照してください。
 
-- [1] *TransferTransfo: A Transfer Learning Approach for Neural Network Based Conversational Agents* by Thomas Wolf et al. ([[https://arxiv.org/abs/1901.08149]])
-- [2] *How to build a State-of-the-Art Conversational AI with Transfer Learning* by Thomas Wolf. ([[https://medium.com/huggingface/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313]])
+- [1] *TransferTransfo: A Transfer Learning Approach for Neural Network Based Conversational Agents* by Thomas Wolf et al. ([https://arxiv.org/abs/1901.08149](https://arxiv.org/abs/1901.08149))
+- [2] *How to build a State-of-the-Art Conversational AI with Transfer Learning* by Thomas Wolf. ([https://medium.com/huggingface/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313](https://medium.com/huggingface/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313))
 
 こうなってくると、日本語のチャットボットを作成できないかと期待しますね！
 しかし、GPT-2を使って日本語でチャットボットを作ろうとした時、立ちはだかる壁があります。

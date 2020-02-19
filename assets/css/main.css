@@ -81,6 +81,9 @@ p {
 }
 
 /* code */
+.highlight {
+    margin: 2rem 0 2rem 0;
+}
 pre.highlight {
     background-color: rgb(245,245,245);
     padding: 2px;

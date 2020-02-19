@@ -6,6 +6,17 @@ body {
     line-height: 1.6rem;
 }
 
+@media (min-width: 992px) {
+    .container {
+      max-width: 720px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+      max-width: 720px;
+    }
+}
+
 .container {
     padding-top: 2em;
     padding-bottom: 2em;

@@ -1,6 +1,9 @@
 body {
+    /*
     color: rgb(78, 44, 1);
+    */
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    line-height: 1.6rem;
 }
 
 .container {
@@ -61,6 +64,10 @@ a:hover {
 .h3, h3 {
     font-size: 1.25em;
     padding-bottom: 0.3em;
+}
+
+p {
+    margin-bottom: 2rem;
 }
 
 /* code */

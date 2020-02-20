@@ -30,7 +30,7 @@ Learn Go with Test では、はじめの数章ではこれでもかというこ�
 
 Learn Go with Tests では、現実的なアプリケーションのテストの書き方も学ぶことができる。
 [Dependency Injection](https://quii.gitbook.io/learn-go-with-tests/go-fundamentals/dependency-injection) と [Mocking](https://quii.gitbook.io/learn-go-with-tests/go-fundamentals/mocking) では、標準出力へ値を表示するコマンドラインプログラムを通して副作用を伴うプログラムへのテスト手法である依存注入やモックといった方法を学ぶことができる。
-さらに [後半の章](pplication/app-intro) では、テストを書きながらAPIサーバを構築する。
+さらに [後半の章](https://quii.gitbook.io/learn-go-with-tests/build-an-application/app-intro) では、テストを書きながらAPIサーバを構築する。
 現実では Go を使って API サーバを構築することも多いと思うので、後半の章を読むことで現実の課題にすぐに取り入れる形でテスト手法を学ぶことができる内容になっている。
 
 以上、簡単だが Learn Go with Tests の概要を紹介した。

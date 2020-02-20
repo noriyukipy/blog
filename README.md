@@ -10,6 +10,7 @@
 
 ## 🗒️ 技術メモ
 
+- [2020/02/07 - 「Learn Go with Tests」を読んだ](article/20200207-read_learn_go_with_tests.md)
 - [2019/12/23 - GPUサーバの新調](article/20191223-new_gpu_server.md)
 - [2019/11/03 - minikube で nginx ingress controller の設定](article/20191103-minikube_nginx_ingress_controller.md)
 

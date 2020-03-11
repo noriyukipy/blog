@@ -11,3 +11,5 @@
     - https://eng.uber.com/pplm/
 - [Wolf+ 2019] [TransferTransfo: A Transfer Learning Approach for Neural Network Based Conversational Agents](https://arxiv.org/abs/1901.08149)
 - [Hupkes+ 2019] [The compositionality of neural networks: integrating symbolism and connectionism](https://arxiv.org/abs/1908.08351)
+- [Felbo+ 2017] [Using millions of emoji occurrences to learn any-domain representations for detecting sentiment, emotion and sarcasm](https://arxiv.org/abs/1708.00524)
+

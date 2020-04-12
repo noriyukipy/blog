@@ -1,4 +1,6 @@
-## 論文メモ
+## 関連資料
+
+### 論文
 
 関連分野の気になった論文をまとめています。
 
@@ -11,5 +13,6 @@
     - https://eng.uber.com/pplm/
 - [Wolf+ 2019] [TransferTransfo: A Transfer Learning Approach for Neural Network Based Conversational Agents](https://arxiv.org/abs/1901.08149)
 - [Hupkes+ 2019] [The compositionality of neural networks: integrating symbolism and connectionism](https://arxiv.org/abs/1908.08351)
+- [Holtzman+ 2019] [The Curious Case of Neural Text Degeneration](https://arxiv.org/abs/1904.09751)
 - [Felbo+ 2017] [Using millions of emoji occurrences to learn any-domain representations for detecting sentiment, emotion and sarcasm](https://arxiv.org/abs/1708.00524)
 

@@ -1,6 +1,4 @@
-## 関連資料
-
-### 論文
+## 論文メモ
 
 関連分野の気になった論文をまとめています。
 
@@ -14,5 +12,10 @@
 - [Wolf+ 2019] [TransferTransfo: A Transfer Learning Approach for Neural Network Based Conversational Agents](https://arxiv.org/abs/1901.08149)
 - [Hupkes+ 2019] [The compositionality of neural networks: integrating symbolism and connectionism](https://arxiv.org/abs/1908.08351)
 - [Holtzman+ 2019] [The Curious Case of Neural Text Degeneration](https://arxiv.org/abs/1904.09751)
+- [Zhang+ 2019] [DialoGPT: Large-Scale Generative Pre-training for Conversational Response Generation](https://arxiv.org/abs/1911.00536)
+  - Links
+    - https://github.com/microsoft/DialoGPT
+    - https://www.microsoft.com/en-us/research/project/large-scale-pretraining-for-response-generation/
+- [Dathathri+ 2019] [Plug and Play Language Models: A Simple Approach to Controlled Text Generation](https://arxiv.org/abs/1912.02164)
+- [Keskar+ 2019] [CTRL: A Conditional Transformer Language Model for Controllable Generation](https://arxiv.org/abs/1909.05858)
 - [Felbo+ 2017] [Using millions of emoji occurrences to learn any-domain representations for detecting sentiment, emotion and sarcasm](https://arxiv.org/abs/1708.00524)
-

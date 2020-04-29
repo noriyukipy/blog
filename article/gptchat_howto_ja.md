@@ -1,6 +1,6 @@
-# 最新のニューラル会話モデルでおしゃべりしよう！ - GPT-2でチャットボット作成
+# 2020/01/13 - 最新のニューラル会話モデルでおしゃべりしよう！ - GPT-2でチャットボット作成
 
-記事作成日 2020/01/13, 記事更新日 2020/01/13
+記事作成日 2020/01/13, 記事更新日 2020/04/29
 
 ## 概要
 
@@ -88,7 +88,7 @@ GPTChatではトークナイザを日本語向けに変更をした上で、GPT-
 Docker イメージをビルドするのが簡単です。
 
 ```sh
-$ git clone https://github.com/noriyukipy/gptchat
+$ git clone -b v0.1.2 https://github.com/noriyukipy/gptchat
 $ cd gptchat
 $ docker image build -t gptchat .
 ```

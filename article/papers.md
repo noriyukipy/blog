@@ -19,3 +19,9 @@
 - [Dathathri+ 2019] [Plug and Play Language Models: A Simple Approach to Controlled Text Generation](https://arxiv.org/abs/1912.02164)
 - [Keskar+ 2019] [CTRL: A Conditional Transformer Language Model for Controllable Generation](https://arxiv.org/abs/1909.05858)
 - [Felbo+ 2017] [Using millions of emoji occurrences to learn any-domain representations for detecting sentiment, emotion and sarcasm](https://arxiv.org/abs/1708.00524)
+
+- [Kannan+2016] [Smart Reply: Automated Response Suggestion for Email](https://arxiv.org/abs/1606.04870)
+
+## Articles
+
+- [2020] https://huggingface.co/blog/how-to-generate

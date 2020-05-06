@@ -1,8 +1,12 @@
 body {
     color: #444;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-    line-height: 1.7rem;
+
+    line-height: 1.6rem;
+    /*
     font-size: 1.1rem;
+    line-height: 1.7rem;
+    */
 }
 
 @media (min-width: 992px) {

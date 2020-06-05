@@ -25,4 +25,5 @@
 ## Articles
 
 - https://huggingface.co/blog/how-to-generate
+- https://developers.google.com/machine-learning/guides/text-classification
 - https://nnadl-ja.github.io/nnadl_site_ja/index.html

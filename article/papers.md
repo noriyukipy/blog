@@ -24,4 +24,5 @@
 
 ## Articles
 
-- [2020] https://huggingface.co/blog/how-to-generate
+- https://huggingface.co/blog/how-to-generate
+- https://nnadl-ja.github.io/nnadl_site_ja/index.html

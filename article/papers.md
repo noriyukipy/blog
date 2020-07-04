@@ -2,6 +2,7 @@
 
 関連分野の気になった論文をまとめています。
 
+- [Maddan+ 2020] [Politeness Transfer: A Tag and Generate Approach](https://arxiv.org/abs/2004.14257)
 - [Adiwardana+ 2020] [Towards a Human-like Open-Domain Chatbot](https://arxiv.org/abs/2001.09977)
   - Links
     - https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html

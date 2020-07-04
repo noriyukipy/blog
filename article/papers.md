@@ -3,6 +3,7 @@
 関連分野の気になった論文をまとめています。
 
 - [Maddan+ 2020] [Politeness Transfer: A Tag and Generate Approach](https://arxiv.org/abs/2004.14257)
+- [Brown+ 2020] [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
 - [Adiwardana+ 2020] [Towards a Human-like Open-Domain Chatbot](https://arxiv.org/abs/2001.09977)
   - Links
     - https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html
@@ -23,8 +24,10 @@
 
 - [Kannan+2016] [Smart Reply: Automated Response Suggestion for Email](https://arxiv.org/abs/1606.04870)
 
-## Articles
+## Useful Articles
 
+- [CMU LTI Low Resource NLP Bootcamp 2020](https://github.com/neubig/lowresource-nlp-bootcamp-2020)
+- [Text Generation with miniature GPT](https://keras.io/examples/generative/text_generation_with_miniature_gpt/)
 - https://huggingface.co/blog/how-to-generate
 - https://developers.google.com/machine-learning/guides/text-classification
 - https://nnadl-ja.github.io/nnadl_site_ja/index.html

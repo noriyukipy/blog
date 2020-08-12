@@ -2,6 +2,8 @@ site_name: SmillingChat
 nav:
     - Home: index.md
     - Blog:
+        - 20200812:
+            - MkDocsで個人サイトとブログを書く: blog/20200812-blog.md
         - 20200227:
             - 「Learn Go with Tests」を読んだ: blog/20200207-read_learn_go_with_tests.md
         - 20200113:

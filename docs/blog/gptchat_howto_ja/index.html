@@ -1,0 +1,1140 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.5">
+    
+    
+      
+        <title>最新のニューラル会話モデルでおしゃべりしよう！ - GPT-2でチャットボット作成 - SmillingChat</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.63b94e9e.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7f672a1f.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#20200113-gpt-2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="SmillingChat" class="md-header-nav__button md-logo" aria-label="SmillingChat">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            SmillingChat
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              最新のニューラル会話モデルでおしゃべりしよう！ - GPT-2でチャットボット作成
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/noriyukipy/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    noriyukipy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../template.ipynb" class="md-tabs__link">
+          Blog
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SmillingChat" class="md-nav__button md-logo" aria-label="SmillingChat">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    SmillingChat
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/noriyukipy/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    noriyukipy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Blog
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Blog" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Blog
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      20200812
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="20200812" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        20200812
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../template.ipynb" title="Template test" class="md-nav__link">
+      Template test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      20200227
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="20200227" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        20200227
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20200207-read_learn_go_with_tests/" title="「Learn Go with Tests」を読んだ" class="md-nav__link">
+      「Learn Go with Tests」を読んだ
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" checked>
+    
+    <label class="md-nav__link" for="nav-2-3">
+      20200113
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="20200113" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        20200113
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        最新のニューラル会話モデルでおしゃべりしよう！ - GPT-2でチャットボット作成
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="最新のニューラル会話モデルでおしゃべりしよう！ - GPT-2でチャットボット作成" class="md-nav__link md-nav__link--active">
+      最新のニューラル会話モデルでおしゃべりしよう！ - GPT-2でチャットボット作成
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    あらすじ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gptchat" class="md-nav__link">
+    GPTChatのインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpt-2" class="md-nav__link">
+    GPT-2 モデル
+  </a>
+  
+    <nav class="md-nav" aria-label="GPT-2 モデル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    学習データの作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpt-2_1" class="md-nav__link">
+    GPT-2 モデルの学習
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    モデルの評価
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    文生成
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    会話モデル
+  </a>
+  
+    <nav class="md-nav" aria-label="会話モデル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    学習データの準備
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    会話モデルの学習
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    応答生成
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    まとめ
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      20191223
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="20191223" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        20191223
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../20191223-new_gpu_server/" title="New GPU Server Setup" class="md-nav__link">
+      New GPU Server Setup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    あらすじ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gptchat" class="md-nav__link">
+    GPTChatのインストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpt-2" class="md-nav__link">
+    GPT-2 モデル
+  </a>
+  
+    <nav class="md-nav" aria-label="GPT-2 モデル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    学習データの作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpt-2_1" class="md-nav__link">
+    GPT-2 モデルの学習
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    モデルの評価
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    文生成
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    会話モデル
+  </a>
+  
+    <nav class="md-nav" aria-label="会話モデル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    学習データの準備
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    会話モデルの学習
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    応答生成
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    まとめ
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/noriyukipy/edit/master/docs/blog/gptchat_howto_ja.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="20200113-gpt-2">2020/01/13 - 最新のニューラル会話モデルでおしゃべりしよう！ - GPT-2でチャットボット作成</h1>
+<p>記事作成日 2020/01/13, 記事更新日 2020/04/29</p>
+<h2 id="_1">概要</h2>
+<ul>
+<li><a href="https://github.com/noriyukipy/gptchat">GPTChat</a> という、日本語向けの GPT-2 言語モデル、およびそれをベースとした会話モデルの学習・生成 CLI を作成しました。</li>
+<li>GPTChat を使って日本語 Wikipedia で GPT-2 を学習し、ファインチューニングして日本語の会話モデルを作成しました。</li>
+</ul>
+<h2 id="_2">あらすじ</h2>
+<p>2018-2019 年は <a href="https://openai.com/blog/language-unsupervised/">GPT</a> とその後継である <a href="https://openai.com/blog/better-language-models/">GPT-2</a> が話題になりました。
+GPT および GPT-2は、大規模なウェブテキストから事前学習した言語モデルで、特定のタスクにファインチューニングすることで多くのベンチマークタスクでSOTAを達成しました。</p>
+<p>では、GPT や GPT-2 をチャットボット向けにファインチューニングすることは可能でしょうか？
+チャットボットへの適用手法は [1] で提案されており、2018年に開催された<a href="http://convai.io/">ConvAI2</a>という対話コンペティションの自動評価部門にて一位に輝いています。
+この手法に興味がある方は、 [1] の他に著者本人が解説した [2] があるので合わせて参照してください。</p>
+<ul>
+<li>[1] <em>TransferTransfo: A Transfer Learning Approach for Neural Network Based Conversational Agents</em> by Thomas Wolf et al. (<a href="https://arxiv.org/abs/1901.08149">https://arxiv.org/abs/1901.08149</a>)</li>
+<li>[2] <em>How to build a State-of-the-Art Conversational AI with Transfer Learning</em> by Thomas Wolf. (<a href="https://medium.com/huggingface/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313">https://medium.com/huggingface/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313</a>)</li>
+</ul>
+<p>こうなってくると、日本語のチャットボットを作成できないかと期待しますね！
+しかし、GPT-2を使って日本語でチャットボットを作ろうとした時、立ちはだかる壁があります。</p>
+<p>一つ目は、GPT-2の公開されている事前学習モデルは英語を中心に学習されていることです。
+GPT-2は事前学習モデルをファインチューニングしてタスクを解きます。
+例えばチャットボットを作ろうとすると、GPT-2の事前学習モデルを「入力発話」から「応答発話」を生成するようにファインチューニングするわけです。
+そのファインチューニングに必要な GPT-2 の事前学習モデルは公開されているのですが、英語を中心に学習されているため日本語には適していません。
+そのため、日本語用の GPT-2 の事前学習モデルを作成する必要があります。</p>
+<p>二つ目は、トークナイザの問題です。
+GPT-2 のトークナイザは、入力文をスペース単位で単語に分割し、単語にバイト単位で多く共通する部分をまとめてトークンとして表現する Byte Pair Encoding という手法を用います。
+この手法で学習したトークナイザの事前学習モデルは提供されいるのですが、こちらも英語を主に学習されているため日本語には不向きです。
+後ほど改めて紹介する <a href="https://github.com/huggingface/transformers">🤗 Transformers</a> が提供している学習済みトークナイザで日本語をトークナイズすると次のようになります。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>&gt;&gt;&gt; import transformers
+&gt;&gt;&gt; <span class="nv">tokenizer</span> <span class="o">=</span> transformers.GPT2Tokenizer.from_pretrained<span class="o">(</span><span class="s2">&quot;gpt2&quot;</span><span class="o">)</span>
+&gt;&gt;&gt; tokenizer.tokenize<span class="o">(</span><span class="s2">&quot;お腹が空いた&quot;</span><span class="o">)</span>
+<span class="o">[</span><span class="s1">&#39;ãģ&#39;</span>, <span class="s1">&#39;Ĭ&#39;</span>, <span class="s1">&#39;è&#39;</span>, <span class="s1">&#39;ħ&#39;</span>, <span class="s1">&#39;¹&#39;</span>, <span class="s1">&#39;ãģĮ&#39;</span>, <span class="s1">&#39;ç&#39;</span>, <span class="s1">&#39;©&#39;</span>, <span class="s1">&#39;º&#39;</span>, <span class="s1">&#39;ãģĦ&#39;</span>, <span class="s1">&#39;ãģŁ&#39;</span><span class="o">]</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>日本語はスペースで単語が分けられていないため、トークナイザは文「お腹が空いた」を一単語として認識し、その後あらかじめ学習しておいたトークン単位に分割しています。
+バイト単位での分割のため、入力した文字数よりも多くのトークンが出現していることもわかります。</p>
+<p>このような観点から、GPT-2 を日本語で使おうとしたとき、</p>
+<ol>
+<li>日本語用のトークナイザに変更する</li>
+<li>その上で、GPT-2 を事前学習する</li>
+</ol>
+<p>必要があります。</p>
+<p>以上を踏まえて、 <a href="https://github.com/noriyukipy/gptchat">GPTChat</a> という GPT-2 の学習・生成 CLI を作成しました。
+GPTChatではトークナイザを日本語向けに変更をした上で、GPT-2 の事前学習モデルの学習スクリプトと、[1] [2] を元にした手法で GPT-2 の事前学習モデルをチャットボット向けにファインチューニングする学習スクリプトを提供しています。</p>
+<p>まず、GPTChat の GPT-2 モデルは、先ほどトークナイザの実例で使った HuggingFaceの <a href="https://github.com/huggingface/transformers">🤗 Transformers</a> を使っています。</p>
+<p>次にトークナイザは、GPT-2 のデフォルトのトークナイザ <code>transformers.GPT2Tokenizer</code> ではなく、BERT 用の日本語向けのトークナイザ <code>transformers.BertJapaneseTokenizer</code> とその学習済みモデルを用いています。
+<code>transformers.BertJapaneseTokenizer</code> は transformers に <a href="https://github.com/huggingface/transformers/releases/tag/v2.3.0">v2.3.0</a> より導入されたトークナイザで、東北大学により公開されていたものがマージされました。
+詳しくは次を参照ください。</p>
+<ul>
+<li><a href="https://www.nlp.ecei.tohoku.ac.jp/news-release/3284/">https://www.nlp.ecei.tohoku.ac.jp/news-release/3284/</a></li>
+<li><a href="https://github.com/cl-tohoku/bert-japanese">https://github.com/cl-tohoku/bert-japanese</a></li>
+</ul>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">おはようござえます、日本の友達<br><br>Hello, Friends from Japan 🇯🇵! <br><br>Thanks to <a href="https://twitter.com/NlpTohoku?ref_src=twsrc%5Etfw">@NlpTohoku</a>, we now have a state-of-the-art Japanese language model in Transformers, `bert-base-japanese`.<br><br>Can you guess what the model outputs in the masked LM task below? <a href="https://t.co/XIBUu7wrex">pic.twitter.com/XIBUu7wrex</a></p>&mdash; Hugging Face (@huggingface) <a href="https://twitter.com/huggingface/status/1205283603128758277?ref_src=twsrc%5Etfw">December 13, 2019</a></blockquote>
+
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p><code>transformers.BertJapaneseTokenizer</code> は、<a href="https://github.com/cl-tohoku/bert-japanese">GitHubのリポジトリ</a>によると、文を MeCab で分かち書きしたのち、SentencePieceの Byte Pair Encoding によってトークナイズを行います。
+実際に使って挙動を確かめてみましょう。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>&gt;&gt;&gt; import transformers
+&gt;&gt;&gt; <span class="nv">tokenizer</span> <span class="o">=</span> transformers.BertJapaneseTokenizer.from_pretrained<span class="o">(</span><span class="s2">&quot;bert-base-japanese&quot;</span><span class="o">)</span>
+&gt;&gt;&gt; tokenizer.tokenize<span class="o">(</span><span class="s2">&quot;お腹が空いた&quot;</span><span class="o">)</span>
+<span class="o">[</span><span class="s1">&#39;お&#39;</span>, <span class="s1">&#39;##腹&#39;</span>, <span class="s1">&#39;が&#39;</span>, <span class="s1">&#39;空い&#39;</span>, <span class="s1">&#39;た&#39;</span><span class="o">]</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>結果をみると、まず MeCab で「お腹」「が」「空い」「た」と分割され、その後 Byte Pari Encoding で「お」「##腹」「が」「空い」「た」と分割されたことが見えますね。</p>
+<p>最後に、GPTChat の会話モデルは [1] [2] を参考に、一問一答型の会話を行うモデルとして実装しました。
+[1] [2] では、対話に個性や履歴を考慮していますが、GPTChatでは個性や履歴は考慮せずシンプルに一問一答を行う会話を対象とします。</p>
+<p>以上で、GPTChat を作成したあらすじと概略は終わりです！
+この後は、 GPTChat の使い方を説明します。
+今回は日本語 Wikipedia で GPT-2 を学習して事前学習モデルを作成したのち、そのモデルをチャットボット向けにファインチューニングして実際に会話するところまで行ってみたいと思います。</p>
+<h2 id="gptchat">GPTChatのインストール</h2>
+<p>Docker イメージをビルドするのが簡単です。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ git clone -b v0.1.2 https://github.com/noriyukipy/gptchat
+$ <span class="nb">cd</span> gptchat
+$ docker image build -t gptchat .
+</code></pre></div>
+</td></tr></table>
+
+<p>ソースからインストールすることも可能です。
+この場合は、必要な環境設定を <a href="https://github.com/noriyukipy/gptchat/blob/v0.1.1/Dockerfile">Dockerfile</a> で確認してください。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ pip install git+https://github.com/noriyukipy/gptchat
+</code></pre></div>
+</td></tr></table>
+
+<h2 id="gpt-2">GPT-2 モデル</h2>
+<h3 id="_3">学習データの作成</h3>
+<p>はじめに、日本語 Wikipedia のダンプデータをダウンロードして学習データとして使えるように整形します。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ mkdir corpus
+$ cat <span class="m">20191201</span>/jawiki-20191201-pages-articles.txt <span class="p">|</span> grep -v doc <span class="p">|</span> perl -wlp -e <span class="s1">&#39;s/。/。\n/g&#39;</span> <span class="p">|</span> perl -wln -e <span class="s1">&#39;/^$/ or print&#39;</span>  &gt;corpus/raw.txt
+$ head -n100000 corpus/raw.txt &gt;corpus/val.txt
+$ head -n200000 corpus/raw.txt <span class="p">|</span> tail -n+100001 &gt;corpus/test.txt
+$ tail -n+200001 corpus/raw.txt &gt;corpus/train.txt
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="gpt-2_1">GPT-2 モデルの学習</h3>
+<p>それでは <code>gptchat.gpt.train</code> を使って BaseModel の GPT-2 を学習してみましょう。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ docker container run --gpus all --rm -d -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/work gptchat python -m gptchat.gpt.train --output_dir<span class="o">=</span>output --data<span class="o">=</span>corpus/train.txt --tokenizer_model<span class="o">=</span>bert-base-japanese --num_epochs<span class="o">=</span><span class="m">10</span> --batch_size<span class="o">=</span><span class="m">2</span> --checkpoint_steps<span class="o">=</span><span class="m">50000</span> --seed<span class="o">=</span><span class="m">0</span> --shuffle<span class="o">=</span>True --gpu
+</code></pre></div>
+</td></tr></table>
+
+<p><code>--tokenizer_model=bert-base-japanese</code> というパラメータを指定していることに注意してください。
+<code>bert-base-japanese</code> を指定することで <code>transformers.BertJapaneseTokenizer</code> を利用します。
+日本語モデルを学習する場合は指定するようにしてください。</p>
+<p><code>--data</code> で先ほど作成した学習データを指定しましょう。</p>
+<p><code>--gpu</code> オプションで学習に GPU を利用するように設定しています。
+今回は学習には RTX 2080 Ti を用いました。
+学習中はだいたい 10GB 程度 GPU メモリを使用していることがわかります。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ nvidia-smi
+Wed Jan  <span class="m">8</span> <span class="m">15</span>:00:06 <span class="m">2020</span>
++-----------------------------------------------------------------------------+
+<span class="p">|</span> NVIDIA-SMI <span class="m">440</span>.33.01    Driver Version: <span class="m">440</span>.33.01    CUDA Version: <span class="m">10</span>.2     <span class="p">|</span>
+<span class="p">|</span>-------------------------------+----------------------+----------------------+
+<span class="p">|</span> GPU  Name        Persistence-M<span class="p">|</span> Bus-Id        Disp.A <span class="p">|</span> Volatile Uncorr. ECC <span class="p">|</span>
+<span class="p">|</span> Fan  Temp  Perf  Pwr:Usage/Cap<span class="p">|</span>         Memory-Usage <span class="p">|</span> GPU-Util  Compute M. <span class="p">|</span>
+<span class="p">|</span><span class="o">===============================</span>+<span class="o">======================</span>+<span class="o">======================</span><span class="p">|</span>
+<span class="p">|</span>   <span class="m">0</span>  GeForce RTX <span class="m">208</span>...  On   <span class="p">|</span> <span class="m">00000000</span>:01:00.0 Off <span class="p">|</span>                  N/A <span class="p">|</span>
+<span class="p">|</span> <span class="m">69</span>%   82C    P2   249W / 250W <span class="p">|</span>  10411MiB / 11019MiB <span class="p">|</span>     <span class="m">99</span>%      Default <span class="p">|</span>
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+<span class="p">|</span> Processes:                                                       GPU Memory <span class="p">|</span>
+<span class="p">|</span>  GPU       PID   Type   Process name                             Usage      <span class="p">|</span>
+<span class="p">|</span><span class="o">=============================================================================</span><span class="p">|</span>
+<span class="p">|</span>    <span class="m">0</span>     <span class="m">24986</span>      C   python                                     10399MiB <span class="p">|</span>
++-----------------------------------------------------------------------------+
+</code></pre></div>
+</td></tr></table>
+
+<p><code>--checkpoint_steps</code> ごとに、 <code>--output_dir</code> 以下にモデルが保存されます。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ tree output
+output
+├── step_0
+│   ├── added_tokens.json
+│   ├── config.json
+│   ├── pytorch_model.bin
+│   ├── special_tokens_map.json
+│   ├── tokenizer_config.json
+│   └── vocab.txt
+└── step_50000-epoch_1-batch_50000
+    ├── added_tokens.json
+    ├── config.json
+    ├── pytorch_model.bin
+    ├── special_tokens_map.json
+    ├── tokenizer_config.json
+    └── vocab.txt
+</code></pre></div>
+</td></tr></table>
+
+<p>モデルのパラメータを確認したい場合は、各モデルのディレクトリ以下の <code>config.json</code> を確認してください。</p>
+<h3 id="_4">モデルの評価</h3>
+<p>学習したモデルに対して <code>gptchat.gpt.evaluate</code> を使ってテストセットに対してパープレキシティを計算できます。
+70万ステップ後の学習モデルをテストセット <code>corpus/test.txt</code> で評価してみましょう。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ docker container run --gpus all --rm -it -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/work gptchat python -m gptchat.gpt.evaluate --model<span class="o">=</span>output/step_700000-epoch_3-batch_89716 --data<span class="o">=</span>corpus/test.txt --batch_size<span class="o">=</span><span class="m">2</span> --gpu
+Perplexity <span class="m">18</span>.0370
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="_5">文生成</h3>
+<p>文を生成するには <code>gpchat.gpt.generate</code> を用います。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ docker container run --rm -it -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/work gptchat python -m gptchat.gpt.generate --model<span class="o">=</span>output/step_700000-epoch_3-batch_89716
+&gt;&gt;&gt; 奈良時代には
+奈良 時代 に は 実在 し た 。 「 埴生 の 説 」 や 「 プルースト の 説 」 の よう な 記述 が み られる 。 初期 王朝 <span class="o">(</span> <span class="m">13</span> 世紀
+&gt;&gt;&gt; 車社会では
+車 社会 で は 、 車両 の 性能 向上 の ため 、 頻繁 に 動力 車 を する 場合 が ある 。 たとえば 、 フォード ・ X <span class="m">1</span> と の 交差点 の 際 の
+</code></pre></div>
+</td></tr></table>
+
+<p>Wikipediaにのっているような文章が生成されていますね！</p>
+<h2 id="_6">会話モデル</h2>
+<p>GPT-2 の事前学習モデルができたので、次はそれをファインチューニングして会話モデルを学習してみましょう。</p>
+<p>GPT-2 を対話モデルとして使うためには、「入力発話」と「応答発話」の間にセパレータを入れてモデルに入力します。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>単語</td>
+<td>\&lt;bos></td>
+<td>餃子</td>
+<td>が</td>
+<td>食べ</td>
+<td>たい</td>
+<td>\&lt;sep></td>
+<td>美味し</td>
+<td>そう</td>
+<td>\&lt;eos></td>
+</tr>
+</tbody>
+</table>
+<p>そして学習時には「応答発話」の言語モデルを学習するようにします。</p>
+<p>それに加えて、 [1] [2] での手法にならい、生成した応答発話が応答として適切かどうか分類するタスクも同時に学習します。
+一単語ごとに生成してできた文が全体として応答発話に適切かどうかを判定しようというわけです。
+この学習を行うために、学習データには事前に distractor と呼ばれる入力発話に対して適切でない応答発話を複数個付与しておき、学習時に分類します。</p>
+<h3 id="_7">学習データの準備</h3>
+<p>用意する学習データセットは入力発話と応答発話をタブで区切ったデータです。
+このデータは各自準備してください。
+今回は、70万ペア程度の会話データを学習に用いました。</p>
+<p>このデータを <code>chat/train.txt</code> として用意します。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ head -n1 chat/train.txt
+何が食べたい？      餃子が食べたいです。
+</code></pre></div>
+</td></tr></table>
+
+<p>このデータに対して、 <code>gptchat.chat.add_distructors</code> で distractor を付与します。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ cat chat/train.txt <span class="p">|</span> python -m gptchat.chat.add_distractors --num_distractors<span class="o">=</span><span class="m">2</span> &gt;chat/train_dist.txt
+</code></pre></div>
+</td></tr></table>
+
+<p>すると、応答発話の後にタブ区切りで <code>--num_distractors</code> で指定した数の distractor が付与されます。
+distractor は応答発話中からランダムで <code>--num_distractors</code> 個選ばれます。
+今回は <code>--num_distractors=2</code> と指定しているので、二つの発話が新たに付与されているのがわかります。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ head -n1 chat/train_dist.txt
+何が食べたい？      餃子が食べたいです。    おはよう〜   勉強中です。
+</code></pre></div>
+</td></tr></table>
+
+<h3 id="_8">会話モデルの学習</h3>
+<p>データの準備ができたら、 <code>gptchat.chat.train</code> で学習します。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ docker container run --gpus all -d -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/work gptchat python -m gptchat.chat.train --output_dir<span class="o">=</span>chat_output --model<span class="o">=</span>output/step_700000-epoch_3-batch_89716 --data<span class="o">=</span>chat/train_dist.txt --batch_size<span class="o">=</span><span class="m">16</span> --num_distructors<span class="o">=</span><span class="m">2</span> --checkpoint_steps<span class="o">=</span><span class="m">50000</span> --num_epochs<span class="o">=</span><span class="m">10</span> --gpu
+</code></pre></div>
+</td></tr></table>
+
+<p>先ほど学習した GPT-2 の事前学習モデルを <code>--model</code> で指定してください。
+BaseModel と同様に、 <code>--checkpoint_steps</code> ステップごとにモデルが<code>--output_dir</code> 以下に保存されます。</p>
+<h3 id="_9">応答生成</h3>
+<p>学習が完了したら、 <code>gpchat.chat.generate</code> で応答生成してみましょう。
+<code>--model</code> に学習したモデルを指定します。
+今回は35万ステップ後の学習モデルを利用します。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ docker container run --rm -it -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/work gptchat python -m gptchat.chat.generate --model<span class="o">=</span>chat_output/step_350000-epoch_10-batch_12500
+&gt;&gt;&gt; おはよう
+&lt;bos&gt; おはよう &lt;sep&gt; おはよう ござい ます ー! &lt;eos&gt;
+&gt;&gt;&gt; お腹減った
+&lt;bos&gt; お腹 減っ た &lt;sep&gt; ご飯 か! &lt;eos&gt;
+&gt;&gt;&gt; 一緒に食べる？
+&lt;bos&gt; 一緒 に 食べる? &lt;sep&gt; とっくに 食べ て まし た! &lt;eos&gt;
+</code></pre></div>
+</td></tr></table>
+
+<p>おおおー！いい感じですね！</p>
+<p>APIとして利用するために、HTTP サーバとして提供するための <code>gptchat.chat.serve</code> も用意しています。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ docker container run --rm -it -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/work -p <span class="m">8080</span>:8080 gptchat python -m gptchat.chat.serve --address<span class="o">=</span><span class="m">0</span>.0.0.0 --port<span class="o">=</span><span class="m">8080</span> --model<span class="o">=</span>chat_output/step_350000-epoch_10-batch_12500
+</code></pre></div>
+</td></tr></table>
+
+<p><code>/generate</code> エンドポイントに対して <code>{"text": "こんにちは"}</code> のようにリクエストを送るとレスポンスとしてモデルの出力が得られます。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ curl localhost:8080/generate -d <span class="s1">&#39;{&quot;text&quot;: &quot;元気？&quot;}&#39;</span> -H <span class="s2">&quot;content-type:application/json&quot;</span> <span class="p">|</span> jq
+<span class="o">{</span>
+  <span class="s2">&quot;text&quot;</span>: <span class="s2">&quot;元気？&quot;</span>,
+  <span class="s2">&quot;model_output&quot;</span>: <span class="s2">&quot;&lt;bos&gt; 元気? &lt;sep&gt; 元気 だ よー!!! &lt;eos&gt;&quot;</span>,
+  <span class="s2">&quot;reply&quot;</span>: <span class="s2">&quot;元気だよー!!!&quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+</td></tr></table>
+
+<h2 id="_10">まとめ</h2>
+<ul>
+<li>日本語向けの GPT-2 の言語モデルおよび会話モデルの学習・生成 CLI である GPTChat を作成しました。</li>
+<li>GPTChat を日本語 Wikipedia で事前学習し、ファインチューニングすることで日本語の会話モデルが作成できることを確認しました。</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../20200207-read_learn_go_with_tests/" title="「Learn Go with Tests」を読んだ" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                「Learn Go with Tests」を読んだ
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../20191223-new_gpu_server/" title="New GPU Server Setup" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                New GPU Server Setup
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d1f5a259.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f9edbbd5.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["tabs", "navigation.expand"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.fae956e7.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

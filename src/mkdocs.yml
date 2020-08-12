@@ -18,7 +18,6 @@ theme:
         - tabs
         - navigation.expand
 
-
 markdown_extensions:
   - pymdownx.emoji
   - pymdownx.magiclink

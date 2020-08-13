@@ -1,6 +1,6 @@
 ---
 date: 2020-01-13
-tag: blog, mkdocs
+tag: gpt-2, neural-conversational-model, chatbot
 ---
 
 # 最新のニューラル会話モデルでおしゃべりしよう！ - GPT-2でチャットボット作成

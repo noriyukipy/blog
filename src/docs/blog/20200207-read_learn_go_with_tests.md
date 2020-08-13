@@ -1,6 +1,6 @@
 ---
 date: 2020-02-07
-tag: blog, mkdocs
+tag: go, tdd
 ---
 
 # 「Learn Go with Tests」を読んだ

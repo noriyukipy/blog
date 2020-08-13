@@ -1,6 +1,6 @@
 ---
 date: 2019-12-23
-tag: blog, mkdocs
+tag: gpu, server
 ---
 
 # GPUサーバの新調

@@ -1,23 +1,23 @@
 site_name: SmillingChat
 nav:
     - Home: index.md
-    - Blog:
-        - 20200812:
-            - MkDocsでブログを書く: blog/20200812-blog.md
-        - 20200227:
-            - 「Learn Go with Tests」を読んだ: blog/20200207-read_learn_go_with_tests.md
-        - 20200113:
-            - 最新のニューラル会話モデルでおしゃべりしよう！ - GPT-2でチャットボット作成: blog/gptchat_howto_ja.md
-        - 20191223:
-            - New GPU Server Setup: blog/20191223-new_gpu_server.md
+    - 2020:
+        - MkDocsでブログを書く: blog/20200812-blog.md
+        - 「Learn Go with Tests」を読んだ: blog/20200207-read_learn_go_with_tests.md
+        - 最新のニューラル会話モデルでおしゃべりしよう！ - GPT-2でチャットボット作成: blog/gptchat_howto_ja.md
+    - 2019:
+        - New GPU Server Setup: blog/20191223-new_gpu_server.md
 
 theme:
     name: material
+    custom_dir: overrides
+    favicon: images/favicon.png
+    prev_next_buttons_location: none
     palette:
         primary: white
         accent: white
     features:
-        - tabs
+        #- tabs
         - navigation.expand
 
 markdown_extensions:
@@ -33,6 +33,3 @@ plugins:
       lang: ja
   - mkdocs-jupyter
   
-# Add source repository
-repo_name: noriyukipy
-repo_url: https://github.com/noriyukipy

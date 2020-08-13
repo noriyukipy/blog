@@ -15,3 +15,13 @@ Build HTML file from source file in `src` directory. Output is placed under `doc
 ```sh
 $ bash build.sh
 ```
+
+## Directory
+
+### `src/overrides`
+
+Extending theme directory. Current customization enables to show `date` and `tag` meta data in the document.
+
+Read documents for more details
+- https://squidfunk.github.io/mkdocs-material/customization/#overriding-blocks
+- https://github.com/mkdocs/mkdocs/blob/a4eb4eb42be5b2b7f401f51baf8c0863f54fe63d/docs/user-guide/custom-themes.md 

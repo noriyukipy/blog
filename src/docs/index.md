@@ -2,8 +2,8 @@
 
 ## 🤖 つくったもの
 
-- [GPTChat](https://github.com/noriyukipy/gptchat) - 日本語向けGPT-2言語モデル、会話モデルの学習・生成 CLI
-- [SmileChat](https://github.com/noriyukipy/smilechat) - YAMLベースでのシンプルな設定、拡張性もあり、各種サービスと連携がとれるPython製のチャットボットフレームワーク
+- [GPTChat](https://github.com/noriyukipy/gptchat) - GPT-2言語モデル、会話モデルの学習・生成 CLI
+- [SmileChat](https://github.com/noriyukipy/smilechat) - Python製のシンプルなチャットボットフレームワーク。YAMLベースでの設定や拡張性、各種サービスと簡単に連携がとれます。
 
 ## 📚 外部記事
 
@@ -12,3 +12,4 @@
 ## 🔖 リンク
 
 - [GitHub](https://github.com/noriyukipy)
+- [Twitter](https://twitter.com/noriyukipy)

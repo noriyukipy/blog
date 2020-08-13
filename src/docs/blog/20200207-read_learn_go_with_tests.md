@@ -1,4 +1,9 @@
-# 2020/02/07 - 「Learn Go with Tests」を読んだ
+---
+date: 2020-02-07
+tag: blog, mkdocs
+---
+
+# 「Learn Go with Tests」を読んだ
 
 最近仕事でも趣味でもGoを書く機会が多い。
 Go を習得するために [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests/) という記事を読んだところとてもよく、Goをこれから学びはじめる方におすすめできる内容だったので紹介したい。

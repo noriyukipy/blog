@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- if page provides date meta-data, show it before content -->
+  {% if page.meta.date %}
+  <div>
+    <small>📅 {{ page.meta.date }}</small>
+  </div>
+  {% endif %}
+  {% if page.meta.tag %}
+  <div>
+    <small>🏷️ {{ page.meta.tag }}</small></p>
+  </div>
+  {% endif %}
+  {{ super() }}
+{% endblock %}

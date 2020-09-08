@@ -1,12 +1,7 @@
 site_name: SmillingChat
 nav:
     - Home: index.md
-    - 2020:
-        - MkDocsでブログを書く: blog/20200812-blog.md
-        - 「Learn Go with Tests」を読んだ: blog/20200207-read_learn_go_with_tests.md
-        - 最新のニューラル会話モデルでおしゃべりしよう！ - GPT-2でチャットボット作成: blog/gptchat_howto_ja.md
-    - 2019:
-        - New GPU Server Setup: blog/20191223-new_gpu_server.md
+    - Blog: blog.md
 
 theme:
     name: material
@@ -17,7 +12,7 @@ theme:
         primary: white
         accent: white
     features:
-        #- tabs
+        # - tabs
         - navigation.expand
 
 markdown_extensions:

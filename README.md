@@ -8,6 +8,14 @@ $ docker container run -w /work -v $(pwd):/work --rm -it -p8000:8000 python:3.8.
 
 Then access to http://localhost:8000
 
+## Blog
+
+Add article and run
+
+```sh
+$ python build_blog.py --doc_dir src/docs/blog --render_path_prefix blog >src/docs/blog.md
+```
+
 ## Build static HTML file
 
 Build HTML file from source file in `src` directory. Output is placed under `docs` directory.

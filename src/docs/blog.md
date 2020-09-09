@@ -2,7 +2,7 @@
 📅 2020-08-13
 🏷 blog, mkdocs
 
-MkDocs+materialテーマでブログを書く設定について考えてみました。
+MkDocs+materialテーマでブログ用の設定を考えてみました。
 <hr />
     
 ## [「Learn Go with Tests」を読んだ](blog/20200207-read_learn_go_with_tests.md)

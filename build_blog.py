@@ -38,7 +38,7 @@ def render_metadata(metadata, filename, render_path_prefix):
 
 def main(doc_dir, render_path_prefix):
     sorted_path = sorted(
-        pathlib.Path(doc_dir).iterdir(),
+        [p for p in pathlib.Path(doc_dir).iterdir() if p.is_file()],
         key=lambda x: x.name,
         reverse=True
     )

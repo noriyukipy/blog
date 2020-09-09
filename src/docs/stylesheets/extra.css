@@ -1,3 +1,7 @@
 .md-header[data-md-state=shadow] {
     box-shadow: none;
 }
+
+.md-header {
+    border-bottom: 1px solid #eeeeee;
+}

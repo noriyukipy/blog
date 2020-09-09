@@ -16,6 +16,11 @@ theme:
         # - tabs
         - navigation.expand
 
+# Read the document for customize css
+# https://squidfunk.github.io/mkdocs-material/customization/#additional-stylesheets
+extra_css:
+  - stylesheets/extra.css
+
 markdown_extensions:
   - pymdownx.emoji
   - pymdownx.magiclink

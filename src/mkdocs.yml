@@ -1,4 +1,4 @@
-site_name: SmillingChat
+site_name: ChatBot Talk
 nav:
     - Home: index.md
     - Blog: blog.md

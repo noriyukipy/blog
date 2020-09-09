@@ -1,9 +1,9 @@
-# SmillingChat
+# ChatBot Talk
 
 ## 🤖 つくったもの
 
 - [GPTChat](https://github.com/noriyukipy/gptchat) - GPT-2言語モデル、会話モデルの学習・生成 CLI
-- [SmileChat](https://github.com/noriyukipy/smilechat) - Python製のシンプルなチャットボットフレームワーク。YAMLベースでの設定や拡張性、各種サービスと簡単に連携がとれます。
+- [msgFlow](https://github.com/noriyukipy/msgflow) - Python製のシンプルなチャットボットフレームワーク。YAMLベースでの設定や拡張性、各種サービスと簡単に連携がとれます。[ドキュメント](https://noriyukipy.github.io/msgflow/)もあります。
 
 ## 📚 外部記事
 

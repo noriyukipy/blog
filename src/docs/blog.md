@@ -1,3 +1,10 @@
+## [ディスプレイ DELL U2720QM の購入](blog/20201004-display.md)
+📅 2020-10-04
+🏷 blog, display
+
+DELL U2720QM を購入しました。
+<hr />
+    
 ## [MkDocsでブログを書く](blog/20200812-blog.md)
 📅 2020-08-13
 🏷 blog, mkdocs

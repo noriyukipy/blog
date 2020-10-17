@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -13,7 +11,7 @@
       
       
       <link rel="shortcut icon" href="../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
     
     
       
@@ -21,19 +19,21 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4dd2dd8d.min.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.6a5ad368.min.css">
-      
+      <link rel="stylesheet" href="../../assets/stylesheets/main.38780c08.min.css">
       
         
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f72e892.min.css">
         
-        <meta name="theme-color" content="#ffffff">
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
       
     
     
     
       
+        
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
@@ -53,9 +53,11 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
-  
     
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+      
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -132,8 +134,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -162,7 +162,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Home" class="md-nav__link">
+    <a href="../.." class="md-nav__link">
       Home
     </a>
   </li>
@@ -174,7 +174,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Blog" class="md-nav__link">
+    <a href="../" class="md-nav__link">
       Blog
     </a>
   </li>
@@ -262,9 +262,6 @@
   
                 
                 
-                  
-                
-                
                 <h1 id="gpu">GPUサーバの新調</h1>
 <p>GPT-2を学習するにあたりGPUのメモリが不足していたので、これを期にGPUサーバを新調した。</p>
 <p>予算は30万円で RTX 2080Ti が選べるBTOパソコンを探した結果、ツクモの<a href="https://www.tsukumo.co.jp/bto/pc/game/2019/GA7J-F194T.html">G-GEAR GA7J-F194/T</a>を購入した。
@@ -290,7 +287,6 @@ Password:
 <span class="m">889192448</span> bytes transferred in <span class="m">33</span>.384081 secs <span class="o">(</span><span class="m">26635223</span> bytes/sec<span class="o">)</span>
 </code></pre></div>
 </td></tr></table>
-
 <h3 id="_2">インストール</h3>
 <p>インストーラメディアからインストーラを起動して設定していく。</p>
 <ul>
@@ -333,19 +329,16 @@ Password:
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ sudo apt install ansible
 </code></pre></div>
 </td></tr></table>
-
 <p>ローカルから公開鍵をコピーする。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ ssh-copy-id -i /path/to/your_public_key <span class="m">192</span>.168.0.3
 </code></pre></div>
 </td></tr></table>
-
 <p>ローカルからAnsible Playbookを実行してDockerとGPU関連の設定を行う。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ git clone https://github.com/noriyukipy/gpu_server_setup
 $ <span class="nb">cd</span> gpu_server_setup
 </code></pre></div>
 </td></tr></table>
-
 <p>inventory.ini を自分の環境設定に書き換えた上でPlaybookを実行する。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -394,15 +387,15 @@ $ ansible-playbook -i inventory.ini main.yml --become --ask-become-pass
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.3636a4ec.min.js"></script>
-      <script src="../../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../../assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "../..",
-          features: ["navigation.expand"],
+          features: ['navigation.expand'],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.5eca75d3.min.js"
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

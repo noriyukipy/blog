@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -13,7 +11,7 @@
       
       
       <link rel="shortcut icon" href="../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
     
     
       
@@ -21,19 +19,21 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4dd2dd8d.min.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.6a5ad368.min.css">
-      
+      <link rel="stylesheet" href="../../assets/stylesheets/main.38780c08.min.css">
       
         
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f72e892.min.css">
         
-        <meta name="theme-color" content="#ffffff">
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
       
     
     
     
       
+        
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
@@ -53,9 +53,11 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
-  
     
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+      
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -132,8 +134,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -162,7 +162,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Home" class="md-nav__link">
+    <a href="../.." class="md-nav__link">
       Home
     </a>
   </li>
@@ -174,7 +174,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Blog" class="md-nav__link">
+    <a href="../" class="md-nav__link">
       Blog
     </a>
   </li>
@@ -304,9 +304,6 @@
   
                 
                 
-                  
-                
-                
                 <h1 id="mkdocs">MkDocsでブログを書く</h1>
 <p>今までブログはMarkdownで書き、GitHub Pagesがデフォルトで提供しているテーマ+カスタムCSSという設定で運用していました。
 この方法では、記事をMarkdownで作成しGitHubプッシュすれば、あとはGitHubが自動でHTMLにビルドして <code>https://&lt;username&gt;.github.io</code> というドメインにページを公開してくれ、大変便利でした。</p>
@@ -340,7 +337,6 @@ MkDocsには標準ではブログの機能は入っていないため、必要�
 <span class="err">└── src  (MkDocsの設定ファイルとMarkdownファイルをおくディレクトリ)</span>
 </code></pre></div>
 </td></tr></table>
-
 <p><code>src</code> ディレクトリ以下にMkDocsの設定ファイル <code>mkdocs.yml</code> およびMarkdownのドキュメントを置きます。</p>
 <p>そして、 <code>docs</code> ディレクトリ以下にはビルドしたHTMLファイルを置きます。
 GitHub Pagesでは公開するディレクトリの設定として</p>
@@ -358,14 +354,12 @@ HTMLドキュメントを GitHub Pagers で公開するときにどの戦略を�
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ docker container run -w /work -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/work --rm -it -p8000:8000 python:3.8.2-buster bash
 </code></pre></div>
 </td></tr></table>
-
 <p>必要なパッケージをインストールします。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="o">(</span>docker container<span class="o">)</span>$ pip install <span class="nv">mkdocs</span><span class="o">==</span><span class="m">1</span>.1.2 mkdocs-material<span class="o">==</span><span class="m">5</span>.5.12 <span class="nv">fire</span><span class="o">==</span><span class="m">0</span>.3.1
 <span class="o">(</span>docker container<span class="o">)</span>$ apt update <span class="o">&amp;&amp;</span> apt install tree
 </code></pre></div>
 </td></tr></table>
-
 <h2 id="mkdocs_1">MkDocs の初期設定</h2>
 <p><code>mkdocs new</code> コマンドで MkDocs の初期設定ファイルを <code>src</code> ディレクトリ以下に生成します。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -377,7 +371,6 @@ INFO    -  Writing config file: src/mkdocs.yml
 INFO    -  Writing initial docs: src/docs/index.md
 </code></pre></div>
 </td></tr></table>
-
 <p>これで初期設定ファイルとMarkdownファイルが生成されます。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -396,13 +389,11 @@ INFO    -  Writing initial docs: src/docs/index.md
 <span class="m">2</span> directories, <span class="m">2</span> files
 </code></pre></div>
 </td></tr></table>
-
 <p>MkDocsでは <code>mkdocs serve</code> コマンドでローカルサーバを立ち上げる機能があり、作成したドキュメントをブラウザから確認することができます。
 それではコマンドを実行してみましょう。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="o">(</span>docker container<span class="o">)</span>$ mkdocs serve --config-file src/mkdocs.yml --dev-addr <span class="m">0</span>.0.0.0:8000
 </code></pre></div>
 </td></tr></table>
-
 <p><a href="http://localhost:8000">http://localhost:8000</a> にブラウザからアクセスすると <code>src/docs/index.md</code> に書かれた内容が表示されます。
 確認できたら一度 <code>C-c</code> でサーバを終了させておきましょう。</p>
 <h3 id="_4">スタティックファイルのビルド</h3>
@@ -420,7 +411,6 @@ INFO    -  Documentation built in <span class="m">0</span>.75 seconds
 <span class="o">(</span>docker container<span class="o">)</span>$ <span class="nb">cd</span> ..
 </code></pre></div>
 </td></tr></table>
-
 <p>はじめに説明したディレクトリ構成にしたがって、HTMLファイルの生成場所を <code>--site-dir</code> オプションで <code>src</code> ディレクトリからの相対パス <code>../docs</code> ディレクトリに設定しています。
 これで、 <code>docs</code> 以下にHTMLファイルが生成できます。</p>
 <p>あとは GitHub にプッシュして GitHub Pagers の設定をすれば公開完了です。(今回はGitHubにプッシュする以降のステップは省略します。)</p>
@@ -460,7 +450,6 @@ INFO    -  Documentation built in <span class="m">0</span>.75 seconds
 <span class="m">8</span> directories, <span class="m">5</span> files
 </code></pre></div>
 </td></tr></table>
-
 <h2 id="_5">テーマの設定</h2>
 <p>それでは、MkDocsにmaterialの設定をしてみましょう。
 次のように <code>src/mkdocs.yml</code> の <code>theme</code> パラメータ以下で <code>material</code> を指定します。</p>
@@ -473,7 +462,6 @@ theme:
     name: material
 </code></pre></div>
 </td></tr></table>
-
 <p>再びサーバを起動して確認すると、material のテーマになっていることがわかります。</p>
 <p><img alt="Screenshot" src="../img/20200812-blog-1.png" /></p>
 <h2 id="_6">記事の作成</h2>
@@ -484,7 +472,6 @@ theme:
 <span class="o">(</span>docker container<span class="o">)</span>$ touch src/docs/blog/20200812-article.md
 </code></pre></div>
 </td></tr></table>
-
 <p>テスト用にブログ記事を適当に書いておきましょう。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -505,7 +492,6 @@ theme:
 <span class="err">ブログのサンプル。ここに本文を書く</span>
 </code></pre></div>
 </td></tr></table>
-
 <p>ポイントは、Markdownの先頭に <code>---</code> で挟むことでメタデータを付与することです。
 このメタデータが今回のブログ化で最も重要な点になります。
 メタデータは MkDocs 内でページを生成する際に使うことができる他、
@@ -516,7 +502,6 @@ theme:
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="o">(</span>docker container<span class="o">)</span>$ touch src/docs/blog.md
 </code></pre></div>
 </td></tr></table>
-
 <p>このファイルの内容は後からスクリプトで自動生成することにしますので、
 ひとまず空ファイルのまま進めましょう。</p>
 <p>次に <code>src/mkdocs.yml</code> で <code>nav</code> の設定を行い、一覧ページを表示するように設定します。</p>
@@ -537,7 +522,6 @@ theme:
     <span class="p p-Indicator">-</span> <span class="nt">Blog</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">blog.md</span>
 </code></pre></div>
 </td></tr></table>
-
 <p>こうすることで、ページ左側の <code>Blog</code> という箇所をクリックすれば一覧ページが見えるようになります。</p>
 <p><img alt="Screenshot" src="../img/20200812-blog-2.png" /></p>
 <p>実際に <code>Blog</code> をクリックしてページをみてみましょう。</p>
@@ -658,7 +642,6 @@ theme:
     <span class="n">fire</span><span class="o">.</span><span class="n">Fire</span><span class="p">(</span><span class="n">main</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
-
 <p><code>doc_dir</code> に記事が置かれているディレクトリを、<code>render_path_prefix</code> で MkDocs のドキュメントルートから各記事のファイルパスのプリフィックスを指定して実行します。
 それでは実行してみましょう。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -676,12 +659,10 @@ theme:
 &lt;hr /&gt;
 </code></pre></div>
 </td></tr></table>
-
 <p>うまく動いているようですね！それでは、この出力をブログ一覧ページにリダイレクトしましょう。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">$(</span>docker container<span class="k">)</span> python build_blog.py --doc_dir src/docs/blog --render_path_prefix blog &gt;src/docs/blog.md
 </code></pre></div>
 </td></tr></table>
-
 <p>これで記事一覧ページができました。実際に確認してみましょう。</p>
 <p><img alt="Screenshot" src="../img/20200812-blog-4.png" /></p>
 <p>きちんと記事一覧ページができていることがわかります。</p>
@@ -739,7 +720,6 @@ theme:
 <span class="o">{</span>% endblock %<span class="o">}</span>
 </code></pre></div>
 </td></tr></table>
-
 <p><code>{% block content %}</code> 以下で <code>content</code> をオーバーライドし、元ある記事の上部にメタデータの <code>date</code> と <code>tag</code> が定義されている場合には表示するようにします。
 定義されていない場合は表示されないので、例えばトップページやブログ一覧ページではメタデータは表示されないのです。
 これは期待通りの動作になっていますね！</p>
@@ -768,7 +748,6 @@ theme:
     <span class="p p-Indicator">-</span> <span class="nt">Blog</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">blog.md</span>
 </code></pre></div>
 </td></tr></table>
-
 <p>実際に表示してみましょう。</p>
 <p><img alt="Screenshot" src="../img/20200812-blog-6.png" /></p>
 <p>当初の目的通りに日付とタグが表示されました！</p>
@@ -815,15 +794,15 @@ Markdownファイルの冒頭にメタデータを付与しておくことで、
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.3636a4ec.min.js"></script>
-      <script src="../../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../../assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "../..",
-          features: ["navigation.expand"],
+          features: ['navigation.expand'],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.5eca75d3.min.js"
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

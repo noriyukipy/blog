@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -11,7 +9,7 @@
       
       
       <link rel="shortcut icon" href="../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
     
     
       
@@ -19,19 +17,21 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4dd2dd8d.min.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.6a5ad368.min.css">
-      
+      <link rel="stylesheet" href="../../assets/stylesheets/main.38780c08.min.css">
       
         
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f72e892.min.css">
         
-        <meta name="theme-color" content="#ffffff">
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
       
     
     
     
       
+        
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
@@ -51,9 +51,11 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
-  
     
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
+      
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -130,8 +132,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -160,7 +160,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Home" class="md-nav__link">
+    <a href="../.." class="md-nav__link">
       Home
     </a>
   </li>
@@ -172,7 +172,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Blog" class="md-nav__link">
+    <a href="../" class="md-nav__link">
       Blog
     </a>
   </li>
@@ -329,9 +329,6 @@
   
                 
                 
-                  
-                
-                
                 <h1 id="-gpt-2">最新のニューラル会話モデルでおしゃべりしよう！ - GPT-2でチャットボット作成</h1>
 <h2 id="_1">概要</h2>
 <ul>
@@ -368,7 +365,6 @@ GPT-2 のトークナイザは、入力文をスペース単位で単語に分�
 <span class="o">[</span><span class="s1">&#39;ãģ&#39;</span>, <span class="s1">&#39;Ĭ&#39;</span>, <span class="s1">&#39;è&#39;</span>, <span class="s1">&#39;ħ&#39;</span>, <span class="s1">&#39;¹&#39;</span>, <span class="s1">&#39;ãģĮ&#39;</span>, <span class="s1">&#39;ç&#39;</span>, <span class="s1">&#39;©&#39;</span>, <span class="s1">&#39;º&#39;</span>, <span class="s1">&#39;ãģĦ&#39;</span>, <span class="s1">&#39;ãģŁ&#39;</span><span class="o">]</span>
 </code></pre></div>
 </td></tr></table>
-
 <p>日本語はスペースで単語が分けられていないため、トークナイザは文「お腹が空いた」を一単語として認識し、その後あらかじめ学習しておいたトークン単位に分割しています。
 バイト単位での分割のため、入力した文字数よりも多くのトークンが出現していることもわかります。</p>
 <p>このような観点から、GPT-2 を日本語で使おうとしたとき、</p>
@@ -388,8 +384,8 @@ GPTChatではトークナイザを日本語向けに変更をした上で、GPT-
 <li><a href="https://github.com/cl-tohoku/bert-japanese">https://github.com/cl-tohoku/bert-japanese</a></li>
 </ul>
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">おはようござえます、日本の友達<br><br>Hello, Friends from Japan 🇯🇵! <br><br>Thanks to <a href="https://twitter.com/NlpTohoku?ref_src=twsrc%5Etfw">@NlpTohoku</a>, we now have a state-of-the-art Japanese language model in Transformers, `bert-base-japanese`.<br><br>Can you guess what the model outputs in the masked LM task below? <a href="https://t.co/XIBUu7wrex">pic.twitter.com/XIBUu7wrex</a></p>&mdash; Hugging Face (@huggingface) <a href="https://twitter.com/huggingface/status/1205283603128758277?ref_src=twsrc%5Etfw">December 13, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 <p><code>transformers.BertJapaneseTokenizer</code> は、<a href="https://github.com/cl-tohoku/bert-japanese">GitHubのリポジトリ</a>によると、文を MeCab で分かち書きしたのち、SentencePieceの Byte Pair Encoding によってトークナイズを行います。
 実際に使って挙動を確かめてみましょう。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -401,7 +397,6 @@ GPTChatではトークナイザを日本語向けに変更をした上で、GPT-
 <span class="o">[</span><span class="s1">&#39;お&#39;</span>, <span class="s1">&#39;##腹&#39;</span>, <span class="s1">&#39;が&#39;</span>, <span class="s1">&#39;空い&#39;</span>, <span class="s1">&#39;た&#39;</span><span class="o">]</span>
 </code></pre></div>
 </td></tr></table>
-
 <p>結果をみると、まず MeCab で「お腹」「が」「空い」「た」と分割され、その後 Byte Pari Encoding で「お」「##腹」「が」「空い」「た」と分割されたことが見えますね。</p>
 <p>最後に、GPTChat の会話モデルは [1] [2] を参考に、一問一答型の会話を行うモデルとして実装しました。
 [1] [2] では、対話に個性や履歴を考慮していますが、GPTChatでは個性や履歴は考慮せずシンプルに一問一答を行う会話を対象とします。</p>
@@ -417,13 +412,11 @@ $ <span class="nb">cd</span> gptchat
 $ docker image build -t gptchat .
 </code></pre></div>
 </td></tr></table>
-
 <p>ソースからインストールすることも可能です。
 この場合は、必要な環境設定を <a href="https://github.com/noriyukipy/gptchat/blob/v0.1.1/Dockerfile">Dockerfile</a> で確認してください。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ pip install git+https://github.com/noriyukipy/gptchat
 </code></pre></div>
 </td></tr></table>
-
 <h2 id="gpt-2">GPT-2 モデル</h2>
 <h3 id="_3">学習データの作成</h3>
 <p>はじめに、日本語 Wikipedia のダンプデータをダウンロードして学習データとして使えるように整形します。</p>
@@ -438,13 +431,11 @@ $ head -n200000 corpus/raw.txt <span class="p">|</span> tail -n+100001 &gt;corpu
 $ tail -n+200001 corpus/raw.txt &gt;corpus/train.txt
 </code></pre></div>
 </td></tr></table>
-
 <h3 id="gpt-2_1">GPT-2 モデルの学習</h3>
 <p>それでは <code>gptchat.gpt.train</code> を使って BaseModel の GPT-2 を学習してみましょう。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ docker container run --gpus all --rm -d -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/work gptchat python -m gptchat.gpt.train --output_dir<span class="o">=</span>output --data<span class="o">=</span>corpus/train.txt --tokenizer_model<span class="o">=</span>bert-base-japanese --num_epochs<span class="o">=</span><span class="m">10</span> --batch_size<span class="o">=</span><span class="m">2</span> --checkpoint_steps<span class="o">=</span><span class="m">50000</span> --seed<span class="o">=</span><span class="m">0</span> --shuffle<span class="o">=</span>True --gpu
 </code></pre></div>
 </td></tr></table>
-
 <p><code>--tokenizer_model=bert-base-japanese</code> というパラメータを指定していることに注意してください。
 <code>bert-base-japanese</code> を指定することで <code>transformers.BertJapaneseTokenizer</code> を利用します。
 日本語モデルを学習する場合は指定するようにしてください。</p>
@@ -489,7 +480,6 @@ Wed Jan  <span class="m">8</span> <span class="m">15</span>:00:06 <span class="m
 +-----------------------------------------------------------------------------+
 </code></pre></div>
 </td></tr></table>
-
 <p><code>--checkpoint_steps</code> ごとに、 <code>--output_dir</code> 以下にモデルが保存されます。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -524,7 +514,6 @@ output
     └── vocab.txt
 </code></pre></div>
 </td></tr></table>
-
 <p>モデルのパラメータを確認したい場合は、各モデルのディレクトリ以下の <code>config.json</code> を確認してください。</p>
 <h3 id="_4">モデルの評価</h3>
 <p>学習したモデルに対して <code>gptchat.gpt.evaluate</code> を使ってテストセットに対してパープレキシティを計算できます。
@@ -534,7 +523,6 @@ output
 Perplexity <span class="m">18</span>.0370
 </code></pre></div>
 </td></tr></table>
-
 <h3 id="_5">文生成</h3>
 <p>文を生成するには <code>gpchat.gpt.generate</code> を用います。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -548,7 +536,6 @@ Perplexity <span class="m">18</span>.0370
 車 社会 で は 、 車両 の 性能 向上 の ため 、 頻繁 に 動力 車 を する 場合 が ある 。 たとえば 、 フォード ・ X <span class="m">1</span> と の 交差点 の 際 の
 </code></pre></div>
 </td></tr></table>
-
 <p>Wikipediaにのっているような文章が生成されていますね！</p>
 <h2 id="_6">会話モデル</h2>
 <p>GPT-2 の事前学習モデルができたので、次はそれをファインチューニングして会話モデルを学習してみましょう。</p>
@@ -597,12 +584,10 @@ Perplexity <span class="m">18</span>.0370
 何が食べたい？      餃子が食べたいです。
 </code></pre></div>
 </td></tr></table>
-
 <p>このデータに対して、 <code>gptchat.chat.add_distructors</code> で distractor を付与します。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ cat chat/train.txt <span class="p">|</span> python -m gptchat.chat.add_distractors --num_distractors<span class="o">=</span><span class="m">2</span> &gt;chat/train_dist.txt
 </code></pre></div>
 </td></tr></table>
-
 <p>すると、応答発話の後にタブ区切りで <code>--num_distractors</code> で指定した数の distractor が付与されます。
 distractor は応答発話中からランダムで <code>--num_distractors</code> 個選ばれます。
 今回は <code>--num_distractors=2</code> と指定しているので、二つの発話が新たに付与されているのがわかります。</p>
@@ -611,13 +596,11 @@ distractor は応答発話中からランダムで <code>--num_distractors</code
 何が食べたい？      餃子が食べたいです。    おはよう〜   勉強中です。
 </code></pre></div>
 </td></tr></table>
-
 <h3 id="_8">会話モデルの学習</h3>
 <p>データの準備ができたら、 <code>gptchat.chat.train</code> で学習します。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ docker container run --gpus all -d -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/work gptchat python -m gptchat.chat.train --output_dir<span class="o">=</span>chat_output --model<span class="o">=</span>output/step_700000-epoch_3-batch_89716 --data<span class="o">=</span>chat/train_dist.txt --batch_size<span class="o">=</span><span class="m">16</span> --num_distructors<span class="o">=</span><span class="m">2</span> --checkpoint_steps<span class="o">=</span><span class="m">50000</span> --num_epochs<span class="o">=</span><span class="m">10</span> --gpu
 </code></pre></div>
 </td></tr></table>
-
 <p>先ほど学習した GPT-2 の事前学習モデルを <code>--model</code> で指定してください。
 BaseModel と同様に、 <code>--checkpoint_steps</code> ステップごとにモデルが<code>--output_dir</code> 以下に保存されます。</p>
 <h3 id="_9">応答生成</h3>
@@ -639,13 +622,11 @@ BaseModel と同様に、 <code>--checkpoint_steps</code> ステップごとに�
 &lt;bos&gt; 一緒 に 食べる? &lt;sep&gt; とっくに 食べ て まし た! &lt;eos&gt;
 </code></pre></div>
 </td></tr></table>
-
 <p>おおおー！いい感じですね！</p>
 <p>APIとして利用するために、HTTP サーバとして提供するための <code>gptchat.chat.serve</code> も用意しています。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ docker container run --rm -it -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/work -p <span class="m">8080</span>:8080 gptchat python -m gptchat.chat.serve --address<span class="o">=</span><span class="m">0</span>.0.0.0 --port<span class="o">=</span><span class="m">8080</span> --model<span class="o">=</span>chat_output/step_350000-epoch_10-batch_12500
 </code></pre></div>
 </td></tr></table>
-
 <p><code>/generate</code> エンドポイントに対して <code>{"text": "こんにちは"}</code> のようにリクエストを送るとレスポンスとしてモデルの出力が得られます。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -660,7 +641,6 @@ BaseModel と同様に、 <code>--checkpoint_steps</code> ステップごとに�
 <span class="o">}</span>
 </code></pre></div>
 </td></tr></table>
-
 <h2 id="_10">まとめ</h2>
 <ul>
 <li>日本語向けの GPT-2 の言語モデルおよび会話モデルの学習・生成 CLI である GPTChat を作成しました。</li>
@@ -700,15 +680,15 @@ BaseModel と同様に、 <code>--checkpoint_steps</code> ステップごとに�
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.3636a4ec.min.js"></script>
-      <script src="../../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../../assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "../..",
-          features: ["navigation.expand"],
+          features: ['navigation.expand'],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.5eca75d3.min.js"
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

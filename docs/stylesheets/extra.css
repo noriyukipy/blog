@@ -1,11 +1,23 @@
-/* Set font */
-/* "M PLUS 1p" is licensed under [SIL Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+/* Font configuration
+ *
+ * "M PLUS 1p" is licensed under [SIL Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
  * by https://fonts.google.com/specimen/M+PLUS+1p?subset=japanese&selection.family=M+PLUS+1p
  *
 */
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap');
 body {
     font-family: 'M PLUS 1p', sans-serif;
+}
+
+/* Configurtion for Markdown pane */
+.md-typeset {
+    font-size: .7rem;
+}
+.md-typeset p {
+    margin: 1.5em 0;
+}
+.md-typeset ul li, .md-typeset ol li {
+    margin-bottom: .1em;
 }
 
 .md-header[data-md-state=shadow] {

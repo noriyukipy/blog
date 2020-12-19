@@ -1,4 +1,4 @@
-site_name: ChatBot Talk
+site_name: チャットボットひろば
 nav:
     - Home: index.md
     - Blog: blog.md
@@ -28,6 +28,9 @@ markdown_extensions:
   - codehilite:
       linenums: true
       use_pygments: true
+  # Enable to add add HTML attributes and CSS classes to Markdown elements
+  # Read https://squidfunk.github.io/mkdocs-material/reference/images/ for more details
+  - attr_list
 plugins:
   # Search must be added when other plugins are loaded
   - search:

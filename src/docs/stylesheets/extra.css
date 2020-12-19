@@ -1,3 +1,13 @@
+/* Set font */
+/* "M PLUS 1p" is licensed under [SIL Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+ * by https://fonts.google.com/specimen/M+PLUS+1p?subset=japanese&selection.family=M+PLUS+1p
+ *
+*/
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap');
+body {
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
 .md-header[data-md-state=shadow] {
     box-shadow: none;
 }

@@ -33,3 +33,4 @@ Extending theme directory. Current customization enables to show `date` and `tag
 Read documents for more details
 - https://squidfunk.github.io/mkdocs-material/customization/#overriding-blocks
 - https://github.com/mkdocs/mkdocs/blob/a4eb4eb42be5b2b7f401f51baf8c0863f54fe63d/docs/user-guide/custom-themes.md 
+- Custom CSS: https://squidfunk.github.io/mkdocs-material/customization/#additional-css

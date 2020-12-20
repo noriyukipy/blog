@@ -487,10 +487,11 @@ CircleCIではローカルで実行して結果を確かめるために<code>cir
 <p>うまく動きました！</p>
 <h2 id="github">GitHubへプッシュして動作確認</h2>
 <p>ローカルで動作確認できたので、次に実際にGitHubにプッシュしてGitHub Actionsで実行してみたいと思います。</p>
-<p>その前に、GitHub Actionsでの料金体系について確認しておきます。<a href="https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-github-actions">About billing for GitHub Actions</a>に書かれている通り、無料のFreeプランでは毎月2,000時間までは無料でGitHub Actionsを実行できます。すごいですね！
+<p>その前に、GitHub Actionsでの料金体系について確認しておきます。<a href="https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-github-actions">About billing for GitHub Actions</a>に書かれている通り、無料のFreeプランではプライベートリポジトリに対して毎月2,000時間までは無料でGitHub Actionsを実行できます。
 ここで気になるのは2,000時間を超えたらどうなるかということですが、<a href="https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-github-actions#about-spending-limits">ドキュメント</a>によると毎月の支払い形態をとっている場合はデフォルトで超過できないように spending limit が $0 に設定されているとのこと。実際にGitHub右上のユーザアイコンから[settings]→[Billing&amp;plans]からみると次のようにspending limitが$0に設定されているのがわかり、時間超過した場合には請求されることなくGitHub Actionsの利用が停止されることがわかります。</p>
 <p><img alt="" src="../img/20201220-github_actions-1.png" /></p>
-<p>これで料金超過の心配は無くなりましたので、リモートリポジトリにプッシュしてGitHub Actionsが実行されるかみてみましょう。</p>
+<p>今回はパブリックリポジトリですので料金に関しては気にしなくて問題ありませんが、プライベートリポジトリでも気づかずに料金超過する心配は無いことがわかりました。</p>
+<p>さて、リモートリポジトリにプッシュしてGitHub Actionsが実行されるかみてみましょう。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ git co -b github_actions

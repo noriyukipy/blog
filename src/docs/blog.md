@@ -1,3 +1,10 @@
+## [CircleCIからGitHub Actionsへの移行](blog/20201220-github_actions.md)
+📅 2020-12-20
+🏷 blog, github, ci
+
+CircleCIでコンテナ内で実行していたユニットテストをGitHub Actionsに移行してみました。
+<hr />
+    
 ## [ディスプレイ DELL U2720QM の購入](blog/20201004-display.md)
 📅 2020-10-04
 🏷 blog, display

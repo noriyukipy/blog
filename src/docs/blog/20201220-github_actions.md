@@ -159,13 +159,14 @@ actでは、引数としてイベントを指定します。今回はプッシ�
 
 ローカルで動作確認できたので、次に実際にGitHubにプッシュしてGitHub Actionsで実行してみたいと思います。
 
-その前に、GitHub Actionsでの料金体系について確認しておきます。[About billing for GitHub Actions](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-github-actions)に書かれている通り、無料のFreeプランでは毎月2,000時間までは無料でGitHub Actionsを実行できます。すごいですね！
+その前に、GitHub Actionsでの料金体系について確認しておきます。[About billing for GitHub Actions](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-github-actions)に書かれている通り、無料のFreeプランではプライベートリポジトリに対して毎月2,000時間までは無料でGitHub Actionsを実行できます。
 ここで気になるのは2,000時間を超えたらどうなるかということですが、[ドキュメント](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-github-actions#about-spending-limits)によると毎月の支払い形態をとっている場合はデフォルトで超過できないように spending limit が $0 に設定されているとのこと。実際にGitHub右上のユーザアイコンから[settings]→[Billing&plans]からみると次のようにspending limitが$0に設定されているのがわかり、時間超過した場合には請求されることなくGitHub Actionsの利用が停止されることがわかります。
 
 ![](img/20201220-github_actions-1.png)
 
+今回はパブリックリポジトリですので料金に関しては気にしなくて問題ありませんが、プライベートリポジトリでも気づかずに料金超過する心配は無いことがわかりました。
 
-これで料金超過の心配は無くなりましたので、リモートリポジトリにプッシュしてGitHub Actionsが実行されるかみてみましょう。
+さて、リモートリポジトリにプッシュしてGitHub Actionsが実行されるかみてみましょう。
 
     $ git co -b github_actions
     $ git cm -m "Add unittest CI for github actions"
